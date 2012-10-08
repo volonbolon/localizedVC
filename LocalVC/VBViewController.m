@@ -44,8 +44,11 @@
     __weak VBViewController *weakSelf = self; 
     [destinationController setLanguageSelectedBlock:^(NSString *languageCode){
       [weakSelf updateWidgets:languageCode];
-      [[weakSelf navigationController] popToRootViewControllerAnimated:YES];
+      [weakSelf dismissViewControllerAnimated:YES
+                                   completion:nil];
     }];
+    
+    NSLocalizedString(<#key#>, <#comment#>)
   }
 }
 
