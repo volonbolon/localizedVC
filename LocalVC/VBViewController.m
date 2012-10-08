@@ -47,7 +47,8 @@
 #pragma mark - VBChooseLanguageDelegate
 - (void)languageSelected:(NSString *)languageCode {
   [self updateWidgets:languageCode];
-  [[self navigationController] popToRootViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES
+                           completion:nil];
 }
 
 @end
