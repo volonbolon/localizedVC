@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol VBChooseLanguageDelegate <NSObject>
-
+@required
+- (void)languageSelected:(NSString *)languageCode; 
 @end

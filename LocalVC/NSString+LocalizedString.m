@@ -9,5 +9,13 @@
 #import "NSString+LocalizedString.h"
 
 @implementation NSString (LocalizedString)
-
++ (NSString *)localizedStringForKey:(NSString *)key
+                           language:(NSString *)language {
+  NSURL *url = [[NSBundle mainBundle] URLForResource:language
+                                       withExtension:@"lproj"];
+  NSBundle *languageBundle = [NSBundle bundleWithURL:url];
+  return [languageBundle localizedStringForKey:key
+                                         value:@""
+                                         table:nil];
+}
 @end

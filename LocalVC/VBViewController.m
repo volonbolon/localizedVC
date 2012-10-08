@@ -7,23 +7,47 @@
 //
 
 #import "VBViewController.h"
+#import "NSString+LocalizedString.h"
+#import "VBChooseLanguageViewController.h"
 
 @interface VBViewController ()
-
+/**
+ @discussion Given the language code, it takes the localized strings and populates the widgets
+ @param iso-639-1 language code 
+ */
+- (void)updateWidgets:(NSString *)languageCode;
 @end
 
 @implementation VBViewController
+@synthesize label;
+@synthesize button;
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)updateWidgets:(NSString *)languageCode {
+  NSString *labelText = [NSString localizedStringForKey:@"GREETINGS"
+                                               language:languageCode];
+  [[self label] setText:labelText];
+  NSString *buttonTitle = [NSString localizedStringForKey:@"BUTTON-TITLE"
+                                                 language:languageCode];
+  [[self button] setTitle:buttonTitle
+                 forState:UIControlStateNormal];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self updateWidgets:@"en"];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender {
+  if ( [[segue identifier] isEqualToString:@"ChooseLanguageSegue"] ) {
+    [(VBChooseLanguageViewController *)[segue destinationViewController] setChooseLanguageDelegate:self];
+  }
+}
+
+#pragma mark - VBChooseLanguageDelegate
+- (void)languageSelected:(NSString *)languageCode {
+  [self updateWidgets:languageCode];
+  [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 @end

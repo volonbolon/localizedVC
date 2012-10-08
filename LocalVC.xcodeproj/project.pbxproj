@@ -23,6 +23,9 @@
 		B0AA6B5916225AEA00E573FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AA6B3416225AE900E573FC /* Foundation.framework */; };
 		B0AA6B6116225AEA00E573FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0AA6B5F16225AEA00E573FC /* InfoPlist.strings */; };
 		B0AA6B6416225AEA00E573FC /* LocalVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA6B6316225AEA00E573FC /* LocalVCTests.m */; };
+		B0AA6B7416225C0B00E573FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0AA6B7616225C0B00E573FC /* Localizable.strings */; };
+		B0AA6B7A16227B5800E573FC /* NSString+LocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA6B7916227B5800E573FC /* NSString+LocalizedString.m */; };
+		B0AA6B7E16227F4600E573FC /* VBChooseLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA6B7D16227F4600E573FC /* VBChooseLanguageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,14 @@
 		B0AA6B6016225AEA00E573FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0AA6B6216225AEA00E573FC /* LocalVCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalVCTests.h; sourceTree = "<group>"; };
 		B0AA6B6316225AEA00E573FC /* LocalVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalVCTests.m; sourceTree = "<group>"; };
+		B0AA6B7516225C0B00E573FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0AA6B7716225C3800E573FC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0AA6B7816227B5800E573FC /* NSString+LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LocalizedString.h"; sourceTree = "<group>"; };
+		B0AA6B7916227B5800E573FC /* NSString+LocalizedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LocalizedString.m"; sourceTree = "<group>"; };
+		B0AA6B7B16227EFD00E573FC /* VBChooseLanguageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBChooseLanguageDelegate.h; sourceTree = "<group>"; };
+		B0AA6B7C16227F4600E573FC /* VBChooseLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBChooseLanguageViewController.h; sourceTree = "<group>"; };
+		B0AA6B7D16227F4600E573FC /* VBChooseLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBChooseLanguageViewController.m; sourceTree = "<group>"; };
+		B0AA6B7F1622836B00E573FC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +134,11 @@
 				B0AA6B4D16225AEA00E573FC /* VBViewController.h */,
 				B0AA6B4E16225AEA00E573FC /* VBViewController.m */,
 				B0AA6B3916225AE900E573FC /* Supporting Files */,
+				B0AA6B7816227B5800E573FC /* NSString+LocalizedString.h */,
+				B0AA6B7916227B5800E573FC /* NSString+LocalizedString.m */,
+				B0AA6B7B16227EFD00E573FC /* VBChooseLanguageDelegate.h */,
+				B0AA6B7C16227F4600E573FC /* VBChooseLanguageViewController.h */,
+				B0AA6B7D16227F4600E573FC /* VBChooseLanguageViewController.m */,
 			);
 			path = LocalVC;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 				B0AA6B4416225AEA00E573FC /* Default.png */,
 				B0AA6B4616225AEA00E573FC /* Default@2x.png */,
 				B0AA6B4816225AEA00E573FC /* Default-568h@2x.png */,
+				B0AA6B7616225C0B00E573FC /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -215,6 +232,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				fr,
 			);
 			mainGroup = B0AA6B2316225AE900E573FC;
 			productRefGroup = B0AA6B2F16225AE900E573FC /* Products */;
@@ -237,6 +256,7 @@
 				B0AA6B4716225AEA00E573FC /* Default@2x.png in Resources */,
 				B0AA6B4916225AEA00E573FC /* Default-568h@2x.png in Resources */,
 				B0AA6B4C16225AEA00E573FC /* MainStoryboard.storyboard in Resources */,
+				B0AA6B7416225C0B00E573FC /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +294,8 @@
 				B0AA6B3F16225AEA00E573FC /* main.m in Sources */,
 				B0AA6B4316225AEA00E573FC /* VBAppDelegate.m in Sources */,
 				B0AA6B4F16225AEA00E573FC /* VBViewController.m in Sources */,
+				B0AA6B7A16227B5800E573FC /* NSString+LocalizedString.m in Sources */,
+				B0AA6B7E16227F4600E573FC /* VBChooseLanguageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +340,16 @@
 				B0AA6B6016225AEA00E573FC /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B0AA6B7616225C0B00E573FC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0AA6B7516225C0B00E573FC /* en */,
+				B0AA6B7716225C3800E573FC /* es */,
+				B0AA6B7F1622836B00E573FC /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -448,6 +480,7 @@
 				B0AA6B6916225AEA00E573FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0AA6B6A16225AEA00E573FC /* Build configuration list for PBXNativeTarget "LocalVCTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +489,7 @@
 				B0AA6B6C16225AEA00E573FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

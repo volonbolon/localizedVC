@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBChooseLanguageDelegate.h"
 
 @interface VBChooseLanguageViewController : UITableViewController
-
+@property (nonatomic, weak) id<VBChooseLanguageDelegate> chooseLanguageDelegate;
 @end
