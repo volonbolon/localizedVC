@@ -47,8 +47,6 @@
       [weakSelf dismissViewControllerAnimated:YES
                                    completion:nil];
     }];
-    
-    NSLocalizedString(<#key#>, <#comment#>)
   }
 }
 
