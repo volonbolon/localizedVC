@@ -65,7 +65,6 @@
 		B0AA6B7716225C3800E573FC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0AA6B7816227B5800E573FC /* NSString+LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LocalizedString.h"; sourceTree = "<group>"; };
 		B0AA6B7916227B5800E573FC /* NSString+LocalizedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LocalizedString.m"; sourceTree = "<group>"; };
-		B0AA6B7B16227EFD00E573FC /* VBChooseLanguageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBChooseLanguageDelegate.h; sourceTree = "<group>"; };
 		B0AA6B7C16227F4600E573FC /* VBChooseLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBChooseLanguageViewController.h; sourceTree = "<group>"; };
 		B0AA6B7D16227F4600E573FC /* VBChooseLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBChooseLanguageViewController.m; sourceTree = "<group>"; };
 		B0AA6B7F1622836B00E573FC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -136,7 +135,6 @@
 				B0AA6B3916225AE900E573FC /* Supporting Files */,
 				B0AA6B7816227B5800E573FC /* NSString+LocalizedString.h */,
 				B0AA6B7916227B5800E573FC /* NSString+LocalizedString.m */,
-				B0AA6B7B16227EFD00E573FC /* VBChooseLanguageDelegate.h */,
 				B0AA6B7C16227F4600E573FC /* VBChooseLanguageViewController.h */,
 				B0AA6B7D16227F4600E573FC /* VBChooseLanguageViewController.m */,
 			);

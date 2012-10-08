@@ -14,6 +14,8 @@
 
 @implementation VBChooseLanguageViewController
 @synthesize languages;
+@synthesize languageSelectedBlock;
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if ( self != nil ) {
@@ -63,9 +65,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath
                            animated:YES];
-  if ( [self chooseLanguageDelegate] != nil ) {
+  if ( [self languageSelectedBlock] != nil ) {
     NSDictionary *lang = [[self languages] objectAtIndex:[indexPath row]];
-    [[self chooseLanguageDelegate] languageSelected:[lang objectForKey:@"code"]];
+    [self languageSelectedBlock]([lang objectForKey:@"code"]);
   }
 }
 

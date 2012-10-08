@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VBChooseLanguageDelegate.h"
+
+typedef void(^LanguageSelectedBlock)(NSString *languageCode);
 
 @interface VBChooseLanguageViewController : UITableViewController
-@property (nonatomic, weak) id<VBChooseLanguageDelegate> chooseLanguageDelegate;
+@property (nonatomic, copy) LanguageSelectedBlock languageSelectedBlock;
 @end

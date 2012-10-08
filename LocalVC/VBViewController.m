@@ -40,7 +40,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender {
   if ( [[segue identifier] isEqualToString:@"ChooseLanguageSegue"] ) {
-    [(VBChooseLanguageViewController *)[segue destinationViewController] setChooseLanguageDelegate:self];
+    VBChooseLanguageViewController *destinationController = (VBChooseLanguageViewController *)[segue destinationViewController];
+    __weak VBViewController *weakSelf = self; 
+    [destinationController setLanguageSelectedBlock:^(NSString *languageCode){
+      [weakSelf updateWidgets:languageCode];
+      [[weakSelf navigationController] popToRootViewControllerAnimated:YES];
+    }];
   }
 }
 

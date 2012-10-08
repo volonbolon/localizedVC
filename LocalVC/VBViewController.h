@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VBChooseLanguageDelegate.h"
 
-@interface VBViewController : UIViewController <VBChooseLanguageDelegate>
+@interface VBViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
